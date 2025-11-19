@@ -299,14 +299,12 @@ main {
   #SIDEBAR
 \*-----------------------------------*/
 
-.sidebar {
+.sidebar { 
   margin-bottom: 15px;
   max-height: 112px;
-  width: 360px;
-  overflow: hidden;
-  transition: var(--transition-2);
-  
-}
+  width: 360px; 
+  overflow: hidden; 
+  transition: var(--transition-2); }
 
 
 .sidebar.active { max-height: 405px;
@@ -401,9 +399,8 @@ main {
 }
 
 .contact-info {
-  width: auto;
-  max-width: none;
-  flex: 1;
+  max-width: calc(100% - 46px);
+  width: calc(100% - 46px);
 }
 
 .contact-title {
