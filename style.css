@@ -301,18 +301,14 @@ main {
 
 .sidebar { 
   margin-bottom: 15px;
-  max-height: 112px;
+  /* allow full sidebar content to show by default */
+  max-height: none;
   width: 360px; 
-  overflow: hidden; 
-  transition: var(--transition-2); }
-
-
-.sidebar.active { max-height: 405px;
-  
- }
+  overflow: visible; 
+  transition: var(--transition-2); 
+}
 
 .sidebar-info {
-  
   position: relative;
   display: flex;
   justify-content: flex-start;
@@ -376,13 +372,15 @@ main {
 .info_more-btn span { display: none; }
 
 .sidebar-info_more {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .3s ease;
+  /* show expanded info by default so sidebar content isn't hidden */
+  max-height: none;
+  overflow: visible;
+  transition: none;
 }
 
 .sidebar.active .sidebar-info_more {
-  max-height: 500px;
+  /* keep compatibility if JS toggles the active class */
+  max-height: none;
 }
 
 .contacts-list {
