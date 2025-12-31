@@ -299,14 +299,14 @@ main {
   #SIDEBAR
 \*-----------------------------------*/
 
-.sidebar {
+.sidebar { 
   margin-bottom: 15px;
-  max-height: 112px;
-  overflow: hidden;
-  transition: var(--transition-2);
+  /* allow full sidebar content to show by default */
+  max-height: none;
+  width: 360px; 
+  overflow: visible; 
+  transition: var(--transition-2); 
 }
-
-.sidebar.active { max-height: 405px; }
 
 .sidebar-info {
   position: relative;
@@ -372,14 +372,15 @@ main {
 .info_more-btn span { display: none; }
 
 .sidebar-info_more {
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--transition-2);
+  /* show expanded info by default so sidebar content isn't hidden */
+  max-height: none;
+  overflow: visible;
+  transition: none;
 }
 
 .sidebar.active .sidebar-info_more {
-  opacity: 1;
-  visibility: visible;
+  /* keep compatibility if JS toggles the active class */
+  max-height: none;
 }
 
 .contacts-list {
