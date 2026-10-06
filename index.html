@@ -1,321 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Emanuelle</title>
-
-  
+  <title>Portfólio Emanuelle de Abreu</title>
   <link rel="shortcut icon" href="./avatar.jpeg" type="image/x-icon">
-
-  
   <link rel="stylesheet" href="./style.css">
-
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+  <canvas id="bg"></canvas>
 
-  
+  <nav class="nav" aria-label="Navegação principal">
+    <a href="#inicio" class="active">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#certificacoes">Certificações</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
   <main>
+    <header class="hero" id="inicio" data-hero>
+      <div class="hero-bigtext" data-layer="-18">PORTFÓLIO</div>
 
-   
+      <div class="hero-stage" data-stage>
+        <img class="hero-photo" src="./avatar.jpeg" alt="Emanuelle de Abreu">
+        <div class="hero-chip chip-1"><b>C#</b> · Java · Python</div>
+        <div class="hero-chip chip-2">Hardware + <b>Software</b></div>
+        <div class="hero-chip chip-3">Eng. da Computação · <b>6º período</b></div>
+      </div>
 
-    <aside class="sidebar" data-sidebar>
+      <div class="hero-info">
+        <h1>Emanuelle de Abreu</h1>
+        <p>Web developer. Gosto de unir código e hardware para criar projetos que funcionam de verdade.</p>
+        <a href="#projetos" class="btn btn-fill">Ver projetos</a>
+        <a href="#contato" class="btn btn-line">Contato</a>
+      </div>
+    </header>
 
-      <div class="sidebar-info">
+    <section class="block" id="sobre">
+      <h2 class="title reveal">Sobre mim</h2>
+      <div class="about-grid reveal">
+        <div class="about-text">
+          <p>Graduanda em Engenharia da Computação (6º período), com perfil comunicativo, facilidade de trabalho em equipe e disposição para aprender novas linguagens de programação. Possuo também conhecimentos em hardware, o que complementa minha formação na área de tecnologia.</p>
+          <p>Possuo sólidos conhecimentos em C#, Java, Python, AutoCAD, HTML e CSS, além de conhecimentos básicos em SQL.</p>
+        </div>
+        <div class="cube-wrap" aria-label="Tecnologias que uso">
+          <div class="cube"><span>C#</span><span>Java</span><span>Python</span><span>HTML</span><span>CSS</span><span>SQL</span></div>
+        </div>
+      </div>
+    </section>
 
-        <figure class="avatar-box">
-          <img src="./avatar.jpeg" alt="Emanuelle de abreu" width="80">
-        </figure>
+    <section class="block" id="projetos">
+      <h2 class="title reveal">Projetos</h2>
+      <ul class="cards reveal">
+        <li class="card" data-tilt>
+          <div class="icon-box"><ion-icon name="hardware-chip-outline"></ion-icon></div>
+          <h3>Display de 7 segmentos no protoboard</h3>
+          <p>Projeto de um display contador da matéria acadêmica circuitos elétricos.</p>
+          <a class="more" href="https://youtu.be/Lg_0NRkdbo8" target="_blank" rel="noopener">Clique aqui para ver! <ion-icon name="arrow-forward"></ion-icon></a>
+        </li>
+        <li class="card" data-tilt>
+          <div class="icon-box"><ion-icon name="code-slash-outline"></ion-icon></div>
+          <h3>Sistema digital de controle de horas em C</h3>
+          <p>Sistema de controle de horas feito em linguagem C, permitindo registrar horas, calcular valores, listar solicitações e realizar aprovação pelo gestor.</p>
+          <a class="more" href="https://github.com/emanuelleabreuc/Sistema-Digital-de-Controle-de-Horas-Extras" target="_blank" rel="noopener">Clique aqui para ver! <ion-icon name="arrow-forward"></ion-icon></a>
+        </li>
+        <li class="card" data-tilt>
+          <div class="icon-box"><ion-icon name="globe-outline"></ion-icon></div>
+          <h3>Projeto site loja tecnologia</h3>
+          <p>Site fictício feito com HTML, CSS e JavaScript.</p>
+          <a class="more" href="https://emanuelleabreuc.github.io/site-tecnologia/" target="_blank" rel="noopener">Clique aqui para ver! <ion-icon name="arrow-forward"></ion-icon></a>
+        </li>
+      </ul>
+    </section>
 
-        <div class="info-content">
-          <h1 class="name" title="Emanuelle de abreu">Emanuelle de Abreu</h1>
+    <section class="block certs" id="certificacoes">
+      <h2 class="title reveal">Certificações</h2>
+      <ul class="cards reveal">
+        <li class="card" data-tilt>
+          <div class="icon-box"><ion-icon name="ribbon-outline"></ion-icon></div>
+          <a href="https://emanuelleabreuc.github.io/cv/certificado%20hardware.pdf" target="_blank" rel="noopener">Curso: Hardware completo</a>
+        </li>
+        <li class="card" data-tilt>
+          <div class="icon-box"><ion-icon name="ribbon-outline"></ion-icon></div>
+          <a href="https://hermes.dio.me/certificates/RWNDJ2XW.pdf" target="_blank" rel="noopener">Formação: HTML web developer</a>
+        </li>
+        <li class="card" data-tilt>
+          <div class="icon-box"><ion-icon name="ribbon-outline"></ion-icon></div>
+          <a href="https://hermes.dio.me/certificates/B4Y8PPTL.pdf" target="_blank" rel="noopener">Curso: Estrutura de dados com Python</a>
+        </li>
+        <li class="card" data-tilt>
+          <div class="icon-box"><ion-icon name="ribbon-outline"></ion-icon></div>
+          <!-- TROCAR: este link apontava para um caminho local (C:\Users\...) e não funciona online. Suba o PDF no GitHub e coloque a URL aqui. -->
+          <a href="#" target="_blank" rel="noopener">Curso: Git e GitHub</a>
+        </li>
+      </ul>
+    </section>
 
-          <p class="title">Web developer</p>
+    <section class="block" id="contato">
+      <h2 class="title reveal">Contato</h2>
+      <div class="contact-grid reveal">
+        <div class="contact-list">
+          <div class="contact-item">
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+            <div><small>Email</small><a href="mailto:emanuelledeabreucaetano@email.com">emanuelledeabreucaetano@email.com</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+            <div><small>Telefone</small><a href="tel:+5527998864413">+55 (27) 99886-4413</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="icon-box"><ion-icon name="calendar-outline"></ion-icon></div>
+            <div><small>Aniversário</small><time datetime="2005-10-27">27 de outubro de 2005</time></div>
+          </div>
+          <div class="contact-item">
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+            <div><small>Localização</small><address>Praia de Itaparica, Espírito Santo</address></div>
+          </div>
+          <div class="social">
+            <a href="https://www.linkedin.com/in/emanuelle-de-abreu-caetano-149876289/" target="_blank" rel="noopener" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://github.com/emanuelleabreuc" target="_blank" rel="noopener" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+          </div>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Contato</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
+        <form class="form" data-form>
+          <input type="text" name="fullname" placeholder="Nome completo" required data-input>
+          <input type="email" name="email" placeholder="Seu email" required data-input>
+          <textarea name="message" placeholder="Sua mensagem" required data-input></textarea>
+          <button class="btn btn-fill" type="submit" disabled data-btn><ion-icon name="paper-plane"></ion-icon> Enviar mensagem</button>
+        </form>
       </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:emanuelledeabreucaetano@email.com" class="contact-link">emanuelledeabreucaetano@email.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Telefone</p>
-
-              <a href="tel:+27998864413" class="contact-link">+55 (27) 99886-4413</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Aniversário</p>
-
-              <time datetime="1982-06-23">27 de outubro de 2005</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Localização</p>
-
-              <address>Praia de Itaparica, Espírito Santo</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/emanuelle-de-abreu-caetano-149876289/" class="social-link" target="_blank">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/emanuelleabreuc" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">Sobre mim</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Graduanda em Engenharia da Computação (6º período), com perfil comunicativo, facilidade de trabalho em equipe e disposição para aprender novas linguagens de programação. Possuo também conhecimentos em hardware, o que complementa minha formação na área de tecnologia. 
-          </p>
-
-          <p>
-           Possuo sólidos conhecimentos em  C#, Java, Python, AutoCAD, HTML e CSS, além de conhecimentos básicos em SQL. 
-          </p>
-        </section>
-
-
-        <section class="service">
-
-          <h3 class="h3 service-title">Projetos</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="display.webp
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Display de 7 segmentos no protoboard</h4>
-
-                <p class="service-item-text">
-                  Projeto de um display contador da matéria acadêmica circuitos elétricos
-                </p>
-                <div class="link-service-content-box">
-                <a href="https://youtu.be/Lg_0NRkdbo8" target="_blank" style="color: crimson;">Clique aqui para ver!</a>
-                </div>
-              </div>
-
-            </li>
-
-            <li class="service-item">         
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Sistema digital de controle de horas em C</h4>
-
-                <p class="service-item-text">
-                  Projeto de um sistema digital de controle de horas feito em linguagem C, permitindo registrar horas, calcular valores, listar solicitações e realizar aprovação pelo gestor
-                </p>
-                <div class="link-service-content-box">
-                <a href="https://github.com/emanuelleabreuc/Sistema-Digital-de-Controle-de-Horas-Extras" target="_blank" style="color: crimson;">Clique aqui para ver!</a>
-                </div>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./Captura de tela 2026-01-13 193843.png" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Projeto site loja tecnologia</h4>
-
-                <p class="service-item-text">
-                  Site fícticio feito com HTML, CSS e JavaScript
-                </p>
-                <div class="link-service-content-box">
-                <a href="https://emanuelleabreuc.github.io/site-tecnologia/" target="_blank" style="color: crimson;">Clique aqui para ver!</a>
-                </div>
-              </div>
-
-            </li>
-            
-
-            </li>
-
-           
-
-          </ul>
-
-        </section>
-
-
-      
-
-        <section class="certificados">
-
-          <h3 class="h3 clients-title">Certificações</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="certificados-item">
-              <a href="https://emanuelleabreuc.github.io/cv/certificado%20hardware.pdf" target="_blank" style="color: crimson;">Curso: Hardware completo</a>
-            </li>
-
-            <li class="certificados-item">
-              <a href="https://hermes.dio.me/certificates/RWNDJ2XW.pdf" target="_blank" style="color: crimson;">Formação: HTML web developer</a>
-            </li>
-
-            <li class="certificados-item">
-              <a href="https://hermes.dio.me/certificates/B4Y8PPTL.pdf" target="_blank" style="color: crimson;">Curso: Estrutura de dados com python 
-                
-              </a>
-            </li>
-
-            <li class="certificados-item">
-              <a href="C:\Users\User\Downloads\e\certificados\14618290_certificado_Fgv.pdf" target="_blank" style="color: crimson;">Curso: Git e github
-                
-              </a>
-            </li>
-
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
-    </div>
-
+    </section>
   </main>
 
+  <footer>© 2026 Emanuelle de Abreu</footer>
 
-
-
-
-  <script src="./assets/js/script.js"></script>
-
- 
+  <script src="./script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
-
 </html>
