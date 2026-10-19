@@ -839,3 +839,137 @@ footer {
     transform: none;
   }
 }
+
+/* Versão PDF (Ctrl+P ou portfolio.pdf): mantém o visual escuro e destaca o link do site */
+.print-only {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html,
+  body {
+    background: var(--smoky-black);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  #bg,
+  .nav,
+  .form,
+  .hero-info .btn,
+  .cube-wrap {
+    display: none !important;
+  }
+
+  .print-only {
+    display: inline;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero {
+    min-height: 297mm;
+    padding: 50px 20px;
+    break-after: page;
+  }
+
+  .hero-bigtext {
+    font-size: 104px;
+  }
+
+  .hero-info p {
+    margin-bottom: 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .print-site {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-top: 36px;
+    padding: 16px 22px 16px 16px;
+    border-radius: 18px;
+    background: var(--eerie-black-2);
+    border: 1px solid var(--yellow);
+    box-shadow: 0 0 40px var(--glow);
+  }
+
+  .print-site img {
+    width: 92px;
+    height: 92px;
+    padding: 6px;
+    border-radius: 10px;
+    background: var(--white-2);
+  }
+
+  .print-site small {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: var(--light-gray-70);
+  }
+
+  .print-site b {
+    font: 700 20px var(--ff-display);
+    color: var(--yellow);
+  }
+
+  section.block {
+    padding: 34px 36px 0;
+  }
+
+  .title {
+    margin-bottom: 22px;
+  }
+
+  .cards {
+    gap: 14px;
+  }
+
+  .card {
+    padding: 20px 22px;
+  }
+
+  #projetos .card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  footer {
+    padding: 24px 20px;
+  }
+
+  #certificacoes {
+    break-before: page;
+  }
+
+  .card,
+  .contact-item {
+    break-inside: avoid;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer a {
+    color: var(--yellow);
+  }
+}
